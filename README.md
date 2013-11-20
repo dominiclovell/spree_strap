@@ -1,7 +1,7 @@
 SpreeStrap
 ==========
 
-A theme extension for Spree built with Bootstrap 3
+A theme extension for Spreecommerce built with Bootstrap 3
 
 
 
@@ -40,7 +40,6 @@ Modify your store/all.js file:
 ```js
 //= require bootstrap/bootstrap
 //= require store/spree_strap_frontend
-
 ```
 
 If you only want to include specific bootstrap js files then instead:
