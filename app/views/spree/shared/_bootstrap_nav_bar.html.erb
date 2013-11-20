@@ -1,22 +1,44 @@
-<nav class="navbar navbar-default" role="navigation">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <%= logo %>
+<header id="header" class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner" data-hook>
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- Use the logo function to bring in the spree logo-->
+      <%= link_to 'Spreestrap', spree.root_path, :class => 'navbar-brand' %>
+      <!-- <%= logo(classes: 'navbar-brand') %> -->
+      
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul id="main-nav-bar" class="nav navbar-nav" data-hook>
+        <li id="home-link" data-hook><%= link_to Spree.t(:home), spree.root_path %></li>
+        <li id="link-to-cart" data-hook><%= link_to_cart %></li>
+        <% if spree_current_user %>
+          <li>
+            <%= link_to Spree.t(:logout), logout_path %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to Spree.t(:login), login_path %>
+          </li>
+          <li>
+            <%= link_to Spree.t(:signup), signup_path %>
+          </li>
+        <% end %>
+      </ul>
+      <div id="nav-bar" data-hook>
+        <div id="search-bar" data-hook>
+          <%= render :partial => 'spree/shared/search' %>
+        </div>
+
+        
+      </div>
+
+    </div><!-- /.navbar-collapse -->
   </div>
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav">
-      <li id="home-link" data-hook><%= link_to Spree.t(:home), spree.root_path %></li>
-      <li id="link-to-cart" data-hook><%= link_to_cart %></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <%= render :partial => 'spree/shared/search' %>
-    </ul>
-  </div><!-- /.navbar-collapse -->
-</nav>
+</header>

@@ -23,17 +23,24 @@ gem 'therubyracer'  # If using Ruby
 gem 'jquery-rails'  # If using Bootstrap's JS plugins.
 ```
 
-Rename application.css to application.less, remove the other requires and add:
+Remove the default spree styles by commenting or removing the line below from store/all.css:
 
 ```less
-*= require spree-strap
+*= require spree_frontend
 ```
 
-Modify your application.js file:
+Add the Spreestrap styles to store/all.css:
+
+```less
+*= require spree_strap_front
+```
+
+Modify your store/all.js file:
 
 ```js
 //= require bootstrap/bootstrap
-to application.js
+//= require store/spree_strap_frontend
+
 ```
 
 If you only want to include specific bootstrap js files then instead:

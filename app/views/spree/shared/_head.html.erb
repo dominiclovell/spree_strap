@@ -6,8 +6,10 @@
 <%== meta_data_tags %>
 <%= canonical_tag %>
 <%= favicon_link_tag image_path('favicon.ico') %>
-<%= stylesheet_link_tag 'application', :media => 'screen' %>
+<%= stylesheet_link_tag 'store/all', :media => 'screen' %>
 <%= csrf_meta_tags %>
+<%= javascript_include_tag 'store/all' %>
+
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
