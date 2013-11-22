@@ -70,7 +70,7 @@ bundle exec rails g spree_strap:install
 Development
 -------
 
-Once you have Spreestrap installed clone it to your local machine so that you can edit the hell out of it and make something beautifull. I know you will.
+Once you have Spreestrap installed clone your fork to your local machine so that you can edit the hell out of it and make something beautiful. I know you will.
 
 If you want to see your changes as you make them edit your Gemfile ot include it from your local copy like this:
 
