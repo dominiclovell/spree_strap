@@ -1,0 +1,17 @@
+<div class="form-group">
+  <%= f.label :email, Spree.t(:email), :class => 'sr-only' %>
+  <%= f.email_field :email, :placeholder => Spree.t(:email), :class => 'form-control' %>
+</div>
+<div id="password-credentials">
+  <div class="form-group">
+    <%= f.label :password, Spree.t(:password), :class => 'sr-only' %>
+    <%= f.password_field :password, :placeholder => Spree.t(:password), :class => 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation, Spree.t(:confirm_password), :class => 'sr-only' %>
+    <%= f.password_field :password_confirmation, :placeholder => Spree.t(:confirm_password), :class => 'form-control' %>
+  </div>
+</div>
+
+<div data-hook="signup_below_password_fields"></div>
