@@ -3,13 +3,15 @@
 <% end %>
 
 <% @body_id = 'login' %>
-<div id="existing-customer">
+<div class="col-sm-6 col-sm-offset-3" id="existing-customer">
   <h3><%= Spree.t(:login_as_existing) %></h3>
   <div data-hook="login">
     <%= render :partial => 'spree/shared/login' %>
-    <%= Spree.t(:or) %>
-    <%= link_to Spree.t(:create_a_new_account), spree.signup_path %> |
-    <%= link_to Spree.t(:forgot_password), spree.recover_password_path %>
+    <p class="login-form-other-options">
+      <%= Spree.t(:or)+ " " %>
+      <%= link_to Spree.t(:create_a_new_account), spree.signup_path %> |
+      <%= link_to Spree.t(:forgot_password), spree.recover_password_path %>
+    </p>
   </div>
 </div>
 <div data-hook="login_extras"></div>

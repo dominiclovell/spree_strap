@@ -1,10 +1,19 @@
 SpreeStrap
 ==========
 
-A theme extension for Spreecommerce built with Bootstrap 3
+A theme extension for Spreecommerce built with Bootstrap 3 and gumption(the personality trait not another codebase(note to self: write some opensource code and call it gumption)). 
 
+This extension also overrides views for the spree_devise_auth gem as well. Because, who has a store without users?
 
+```code
+¡ǝuo ou :ɹǝʍsuɐ
+```
 
+I built this extension with a fair amount of optimism and hubris, and also because I had a project coming down the pipeline that required a e-commerce solution. 
+
+Here at Rounded, we develop all of our websites on the Bootstrap framework. Bootstrap is awesome and makes everyone's life a lot easier, allowing more time for ping-pong and flights-of-fancy discussions. To prepare for the project I decided to make a good foundation with the latest Bootstrap and Spree releases. I quickly realized it's potential for repeat usefullness and thought other web developers would as well.
+
+I hope you enjoy life, find this helpful, and I become internet famous on github.
 
 
 Installation

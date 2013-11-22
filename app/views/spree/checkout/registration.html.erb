@@ -9,11 +9,13 @@
       <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @order } %>
       <h3><%= Spree.t(:guest_user_account) %></h3>
       <%= form_for @order, :url => update_checkout_registration_path, :method => :put, :html => { :id => 'checkout_form_registration' } do |f| %>
-        <p>
-          <%= f.label :email, Spree.t(:email) %><br />
-          <%= f.email_field :email, :class => 'title' %>
-        </p>
-        <p><%= f.submit Spree.t(:continue), :class => 'button primary' %></p>
+        <div class="form-group">
+          <%= f.label :email, Spree.t(:email), :class => 'sr-only' %>
+          <%= f.email_field :email, :placeholder => Spree.t(:email), :class => 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.submit Spree.t(:continue), :class => 'btn btn-primary' %>
+        </div>
       <% end %>
     </div>
   <% end %>
