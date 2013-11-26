@@ -1,6 +1,6 @@
 <h3><%= Spree.t(:order_summary) %></h3>
 
-<table data-hook="order_summary table table-striped">
+<table class="table table-bordered" data-hook="order_summary table table-striped">
   <tbody>
     <tr data-hook="item_total">
       <td><strong><%= Spree.t(:item_total) %>:</strong></td>
@@ -24,7 +24,7 @@
         <% @order.line_item_adjustment_totals.each do |label, total| %>
           <tr class="total">
             <td><strong><%= label %></strong></td>
-            <td><strong><span><%= total.to_html %></span></strong></td>
+            <td><strong><%= total.to_html %></strong></td>
           </tr>
         <% end %>
       </tbody>
