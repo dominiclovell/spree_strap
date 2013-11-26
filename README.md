@@ -6,7 +6,7 @@ A theme extension for Spreecommerce built with Bootstrap 3 and gumption (the per
 This extension also overrides views for the spree_devise_auth gem as well, because who has a store without users?
 
 ```
-¡ǝuo ou :ɹǝʍsuɐ
+˙ǝuo ou :ɹǝʍsuɐ
 ```
 
 I built this spree extension because I had a project coming down the pipeline that required a rails e-commerce solution.
