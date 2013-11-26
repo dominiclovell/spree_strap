@@ -1,7 +1,7 @@
 SpreeStrap
 ==========
 
-A theme extension for Spreecommerce built with Bootstrap 3 and gumption (the personality trait not another codebase (note to self: write some opensource code and call it gumption) ). 
+A theme extension for Spreecommerce built with Bootstrap 3 and gumption (the personality trait not another codebase (note to self: write some opensource code and call it gumption)). 
 
 This extension also overrides views for the spree_devise_auth gem as well, because who has a store without users?
 
