@@ -6,7 +6,7 @@ module SpreeStrap
       class_option :auto_run_migrations, :type => :boolean, :default => false
 
       def copy_bootstrap
-        directory 'bootstrap', 'app/assets/stylesheets'
+        directory 'stylesheets', 'app/assets/stylesheets'
       end
 
       # def add_javascripts

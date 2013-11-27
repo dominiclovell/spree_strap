@@ -1,7 +1,20 @@
 SpreeStrap
 ==========
 
-A theme extension for Spreecommerce built with Bootstrap 3 and gumption (the personality trait not another codebase (note to self: write some opensource code and call it gumption)). 
+A Spreecommerce extension built with Bootstrap. Currently supporting Spree 2-1-stable and Bootstrap 3.
+
+This spree extension is meant as a starter extension for Spreecommerce. Ie., A way to get you up and running with Bootstrap as a skeleton for you own beautifully designed extension. You can use it as a gem and hack away but if you want full contol over the tasty bootstrap sauce I would recommend using this workflow.
+
+1. Duplicate this repository https://help.github.com/articles/duplicating-a-repository
+2. Clone your copy
+3. Add your local copy to the the gem file
+4. $ bundle install
+5. Run the install generator
+6. Make it pretty
+7. Push your Spreestrap to github (make it public if you like sharing)
+8. Modify your gemfile to point to the remote
+9. Deploy your store
+
 
 This extension also overrides views for the spree_devise_auth gem as well, because who has a store without users?
 
@@ -9,16 +22,7 @@ This extension also overrides views for the spree_devise_auth gem as well, becau
 ˙ǝuo ou :ɹǝʍsuɐ
 ```
 
-I built this spree extension because I had a project coming down the pipeline that required a rails e-commerce solution.
-
-Everyone I work with uses Bootstrap. Bootstrap is an awesome css framework and makes everyone's life a lot easier, allowing more time for ping-pong and flight-of-fancy discussions. There was this: https://github.com/jdutil/spree_bootstrap but it didn't use Bootstrap 3 and wasn't built for the latest Spree version, namely 2-1-stable. 
-
-This is my attempt to make a good starter theme with the latest Bootstrap and Spree releases. I quickly realized it's potential for repeat usefullness and thought other web developers would as well.
-
-I hope you enjoy your life even more now that this exists.
-
-
-Installation
+Workflow Details
 ------------
 
 Add spree_strap to your Gemfile by forking it and referencing your fork in your project gem file. This will allow you to modify it easliy.
@@ -67,25 +71,9 @@ bundle
 bundle exec rails g spree_strap:install
 ```
 
-Development
--------
-
-Once you have Spreestrap installed clone your fork to your local machine so that you can edit the hell out of it and make something beautiful. I know you will.
-
-If you want to see your changes as you make them edit your Gemfile ot include it from your local copy like this:
-
-```ruby
-gem 'spree_strap', :path => '../spree_strap'
-```
-
-Remember to switch it back to github source once it is deployed.
-
-
 
 Testing
 -------
-
-I have no idea if any of this is still usefull, but you might, and may even use it.
 
 Be sure to bundle your dependencies and then create a dummy test app for the specs to run against.
 
