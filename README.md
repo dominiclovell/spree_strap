@@ -20,14 +20,6 @@ Add spree_strap to your Gemfile.
 gem 'spree_strap', github: 'Rounded/spree_strap'
 ```
 
-Add Dependencies to your Gemfile or un-comment them:
-
-```ruby
-gem 'therubyracer'  # If using Ruby
-gem 'jquery-rails'  # If using Bootstrap's JS plugins.
-gem 'less-rails'  # Required for CSS
-```
-
 Remove the default spree styles by commenting or removing the lines below from store/all.css:
 
 ```less
