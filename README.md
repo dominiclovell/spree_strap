@@ -1,4 +1,4 @@
-SpreeStrap for Bootstrap 3
+SpreeStrap
 ==========
 
 A Spreecommerce extension built with Bootstrap. Currently supporting Spree 2-1-stable and Bootstrap 3.
