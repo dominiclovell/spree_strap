@@ -27,18 +27,6 @@ Remove the default spree styles by commenting or removing the lines below from s
 *= require_tree .
 ```
 
-Add the Spreestrap styles to store/all.css:
-
-```less
-*= require store/spree_strap/spree_strap_frontend
-```
-
-Add the spree_strap javascripts to your store/all.js file:
-
-```js
-//= require store/spree_strap/spree_strap_frontend
-```
-
 Bundle your dependencies and run the installation generator:
 
 ```shell
@@ -81,7 +69,20 @@ Create your own extension starting with SpreeStrap
 2. Clone your copy
 3. Add your local copy to the the gem file
 4. $ bundle install
-5. Run the install generator
+5. Require the css and javascript
+
+Add the Spreestrap styles to store/all.css:
+
+```less
+*= require store/spree_strap/spree_strap_frontend
+```
+
+Add the spree_strap javascripts to your store/all.js file:
+
+```js
+//= require store/spree_strap/spree_strap_frontend
+```
+
 6. Make it pretty
 7. Push your Spreestrap to github (make it public if you like sharing)
 8. Modify your gemfile to point to the remote
