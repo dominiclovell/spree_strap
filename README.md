@@ -3,18 +3,7 @@ SpreeStrap
 
 A Spreecommerce extension built with Bootstrap. Currently supporting Spree 2-1-stable and Bootstrap 3.
 
-This spree extension is meant as a starter extension for Spreecommerce. Ie., A way to get you up and running with Bootstrap as a skeleton for you own beautifully designed extension. You can use it as a gem and hack away but if you want full contol over the tasty bootstrap sauce I would recommend using this workflow.
-
-1. Duplicate this repository https://help.github.com/articles/duplicating-a-repository
-2. Clone your copy
-3. Add your local copy to the the gem file
-4. $ bundle install
-5. Run the install generator
-6. Make it pretty
-7. Push your Spreestrap to github (make it public if you like sharing)
-8. Modify your gemfile to point to the remote
-9. Deploy your store
-
+This spree extension is meant as a starter theme for Spreecommerce. Ie., A way to get you up and running with Bootstrap as a skeleton for you own beautifully designed store. You can either install it directly to you app or create your own extension from it.
 
 This extension also overrides views for the spree_devise_auth gem as well, because who has a store without users?
 
@@ -22,13 +11,13 @@ This extension also overrides views for the spree_devise_auth gem as well, becau
 ˙ǝuo ou :ɹǝʍsuɐ
 ```
 
-Workflow Details
-------------
+Install Instructions
+--------------------
 
-Add spree_strap to your Gemfile by forking it and referencing your fork in your project gem file. This will allow you to modify it easliy.
+Add spree_strap to your Gemfile.
 
 ```ruby
-gem 'spree_strap', github: 'youraccount/spree_strap'
+gem 'spree_strap', github: 'rounded/spree_strap'
 ```
 
 Add Dependencies to your Gemfile or un-comment them:
@@ -47,21 +36,13 @@ Remove the default spree styles by commenting or removing the line below from st
 Add the Spreestrap styles to store/all.css:
 
 ```less
-*= require spree_strap_front
+*= require store/spree_strap/spree_strap_frontend
 ```
 
-Modify your store/all.js file:
+Add the spree_strap javascripts to your store/all.js file:
 
 ```js
-//= require bootstrap/bootstrap
-//= require store/spree_strap_frontend
-```
-
-If you only want to include specific bootstrap js files then instead:
-
-```js
-//= require bootstrap/affix
-//= require bootstrap/modal
+//= require store/spree_strap/spree_strap_frontend
 ```
 
 Bundle your dependencies and run the installation generator:
@@ -71,6 +52,15 @@ bundle
 bundle exec rails g spree_strap:install
 ```
 
+Optimization
+------------
+
+If you only want to include specific bootstrap js files find the installed spree_strap_frontend.js file and remove the bootstrap line and replace with something like the examples below:
+
+```js
+//= require bootstrap/affix
+//= require bootstrap/modal
+```
 
 Testing
 -------
@@ -89,5 +79,19 @@ Simply add this require statement to your spec_helper:
 ```ruby
 require 'spree_strap/factories'
 ```
+
+Create your own extension starting with SpreeStrap
+--------------------------------------------------
+
+1. Duplicate this repository https://help.github.com/articles/duplicating-a-repository
+2. Clone your copy
+3. Add your local copy to the the gem file
+4. $ bundle install
+5. Run the install generator
+6. Make it pretty
+7. Push your Spreestrap to github (make it public if you like sharing)
+8. Modify your gemfile to point to the remote
+9. Deploy your store
+
 
 Copyright (c) 2013 Rounded, released under the New BSD License

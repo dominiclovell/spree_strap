@@ -2,11 +2,23 @@ module SpreeStrap
   module Generators
     class InstallGenerator < Rails::Generators::Base
 
-      source_root File.expand_path('../templates', __FILE__)
+      source_root File.expand_path('../../../../../app', __FILE__)
       class_option :auto_run_migrations, :type => :boolean, :default => false
 
-      def copy_bootstrap
-        directory 'stylesheets', 'app/assets/stylesheets'
+      def copy_styles
+        directory 'assets/stylesheets/store/spree_strap', 'app/assets/stylesheets/store/spree_strap'
+      end
+
+      def copy_javascripts
+        directory 'assets/javascripts/store/spree_strap', 'app/assets/javascripts/store/spree_strap'
+      end
+
+      def copy_views
+        directory 'views/spree', 'app/views/spree'
+      end
+
+      def copy_helpers
+        directory 'helpers/spree', 'app/helpers/spree'
       end
 
       # def add_javascripts
