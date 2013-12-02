@@ -21,15 +21,13 @@ module SpreeStrap
         directory 'helpers/spree', 'app/helpers/spree'
       end
 
-      # def add_javascripts
-      #   append_file 'app/assets/javascripts/store/all.js', "//= require store/spree_strap\n"
-      #   append_file 'app/assets/javascripts/admin/all.js', "//= require admin/spree_strap\n"
-      # end
+      def add_javascripts
+        append_file 'app/assets/javascripts/store/all.js', "//= require store/spree_strap/spree_strap_frontend\n"
+      end
 
-      # def add_stylesheets
-      #   inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/spree_strap\n", :before => /\*\//, :verbose => true
-      #   inject_into_file 'app/assets/stylesheets/admin/all.css', " *= require admin/spree_strap\n", :before => /\*\//, :verbose => true
-      # end
+      def add_stylesheets
+        inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/spree_strap/spree_strap_frontend\n", :before => /\*\//, :verbose => true
+      end
     end
   end
 end
