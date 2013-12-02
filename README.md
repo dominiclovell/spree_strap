@@ -17,7 +17,7 @@ Install Instructions
 Add spree_strap to your Gemfile.
 
 ```ruby
-gem 'spree_strap', github: 'rounded/spree_strap'
+gem 'spree_strap', github: 'Rounded/spree_strap'
 ```
 
 Add Dependencies to your Gemfile or un-comment them:
