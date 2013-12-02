@@ -25,12 +25,14 @@ Add Dependencies to your Gemfile or un-comment them:
 ```ruby
 gem 'therubyracer'  # If using Ruby
 gem 'jquery-rails'  # If using Bootstrap's JS plugins.
+gem 'less-rails'  # Required for CSS
 ```
 
-Remove the default spree styles by commenting or removing the line below from store/all.css:
+Remove the default spree styles by commenting or removing the lines below from store/all.css:
 
 ```less
 *= require spree_frontend
+*= require_tree .
 ```
 
 Add the Spreestrap styles to store/all.css:
