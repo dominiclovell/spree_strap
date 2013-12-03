@@ -20,6 +20,13 @@ Add spree_strap to your Gemfile.
 gem 'spree_strap', github: 'Rounded/spree_strap'
 ```
 
+Add or un-comment dependencies
+
+```ruby
+gem 'therubyracer', platforms: :ruby
+gem 'less-rails'
+```
+
 Remove the default spree styles by commenting or removing the lines below from store/all.css:
 
 ```less
