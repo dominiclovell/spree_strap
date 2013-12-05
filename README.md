@@ -27,11 +27,17 @@ gem 'therubyracer', platforms: :ruby
 gem 'less-rails'
 ```
 
-Remove the default spree styles by commenting or removing the lines below from store/all.css:
+Remove the default spree styles by commenting or removing the lines below from app/assets/stylesheets/store/all.css:
 
 ```less
 *= require spree_frontend
 *= require_tree .
+```
+
+Remove the require tree from the app/assets/javascripts/store/all.js
+
+```javascript
+//= require tree .
 ```
 
 Bundle your dependencies and run the installation generator:
